@@ -1,4 +1,5 @@
 #pragma once
+
 #include<iostream>
 #include<memory>
 #include <thread>
@@ -12,7 +13,7 @@ public:
 	~clsMain();
 
 	void cMain();
-	virtual void Work1();
+	void Work1();
 
 private:
 

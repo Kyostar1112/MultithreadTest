@@ -22,9 +22,9 @@ int main(int argc, char **argv)
 
 void clsMain::Work1()
 {
-	int Num = 0;
-	bool Enable = false;
-	char  ch;
+	int		Num = 0;
+	bool	Enable = false;
+	char	ch;
 
 	while (Enable) {
 		cout << "Work1" << Num << endl;
