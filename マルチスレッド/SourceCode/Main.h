@@ -2,8 +2,8 @@
 #pragma once
 
 //インクルード.
-#include<iostream>
-#include<memory>
+#include <iostream>
+#include <memory>
 #include <thread>
 #include <vector>
 #include <Windows.h>
