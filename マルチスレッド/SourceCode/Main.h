@@ -4,10 +4,12 @@
 //インクルード.
 #include <iostream>
 #include <memory>
-#include <thread>
 #include <vector>
 #include <Windows.h>
-#include <atomic>
+
+#include"One.h"
+#include"Two.h"
+#include"Singleton.h"
 
 using namespace std;
 class clsMain
@@ -18,12 +20,13 @@ public:
 
 	void cMain();
 
-	static void Work1();
-	static void Work2();
-	static void Work3();
-	static void Work4();
+	int m_iCnt;
 
-	int Cnt;
+	unique_ptr<clsOne> m_smpOne;
+	unique_ptr<clsTwo> m_smpTwo;
+
+	void DispNum(int Num);
+
 #if 0
 	static void AddAtomNum()
 	{
@@ -50,4 +53,7 @@ public:
 private:
 };
 
-std::unique_ptr<clsMain> m_smpMain;
+unique_ptr<clsMain> m_smpMain;
+
+
+
