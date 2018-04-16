@@ -24,11 +24,19 @@ void clsTwo::Cnt2(int Num)
 	m_iCnt++;
 }
 
-void clsTwo::Thread2(int Num)
+clsTwoOut::clsTwoOut()
 {
-	thread th2(&clsTwo::Cnt2,Num/*[] {}*/);
-	if (th2.joinable())
+}
+
+clsTwoOut::~clsTwoOut()
+{
+}
+
+void clsTwoOut::OutThred()
+{
+	thread Th2(&clsTwo::Cnt2,10);
+	if (Th2.joinable())
 	{
-		th2.join();
+		Th2.join();
 	}
 }

@@ -13,10 +13,10 @@ public:
 
 	void Cnt1(int Num);
 
-	int m_iCnt;
+private:
+
+	int  m_iCnt;
 
 	bool m_bFinish;
-
-private:
 
 };

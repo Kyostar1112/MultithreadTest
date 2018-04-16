@@ -28,10 +28,10 @@ bool clsOne::GetFinsh()
 
 void clsOne::Thread1(int Num)
 {
-	thread th1(&clsOne::Cnt1, Num);
-	if (th1.joinable())
+	thread Th1(&clsOne::Cnt1,Num);
+	if (Th1.joinable())
 	{
-		th1.join();
+		Th1.join();
 	}
 }
 
