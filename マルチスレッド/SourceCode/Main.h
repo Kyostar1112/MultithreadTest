@@ -9,7 +9,6 @@
 
 #include"One.h"
 #include"Two.h"
-#include"Singleton.h"
 
 using namespace std;
 class clsMain

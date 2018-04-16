@@ -14,7 +14,7 @@ clsOne::~clsOne()
 
 void clsOne::thread1(int Num)
 {
-	thread th1(/*&clsOne::Cnt,Num*/[] {});
+	thread th1(&clsOne::Cnt,Num/*[] {}*/);
 	if (th1.joinable())
 	{
 		th1.join();

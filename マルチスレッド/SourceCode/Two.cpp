@@ -17,7 +17,7 @@ bool clsTwo::GetFinsh()
 
 void clsTwo::thread2(int Num)
 {
-	thread th2(&clsTwo::Cnt,Num);
+	thread th2(/*&clsTwo::Cnt,Num*/[]{});
 	if (th2.joinable())
 	{
 		th2.join();
