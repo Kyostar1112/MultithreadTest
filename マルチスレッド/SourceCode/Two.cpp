@@ -15,20 +15,20 @@ bool clsTwo::GetFinsh()
 	return m_bFinish;
 }
 
-void clsTwo::thread2(int Num)
-{
-	thread th2(/*&clsTwo::Cnt,Num*/[]{});
-	if (th2.joinable())
-	{
-		th2.join();
-	}
-}
-
-void clsTwo::Cnt(int Num)
+void clsTwo::Cnt2(int Num)
 {
 	if (m_iCnt>Num)
 	{
 		m_bFinish = true;
 	}
 	m_iCnt++;
+}
+
+void clsTwo::Thread2(int Num)
+{
+	thread th2(&clsTwo::Cnt2,Num/*[] {}*/);
+	if (th2.joinable())
+	{
+		th2.join();
+	}
 }

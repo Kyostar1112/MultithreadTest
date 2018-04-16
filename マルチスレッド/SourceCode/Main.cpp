@@ -31,8 +31,8 @@ void clsMain::cMain()
 	while (1)
 	{
 		m_iCnt++;
-		m_smpOne->thread1(200);
-		m_smpTwo->thread2(1000);
+		m_smpOne->Thread1(200);
+		m_smpTwo->Thread2(1000);
 		DispNum(m_iCnt);
 	}
 

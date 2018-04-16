@@ -7,13 +7,16 @@ public:
 	clsOne();
 	~clsOne();
 
-	void thread1(int Num);
-
 	bool GetFinsh();
-	bool m_bFinish;
-private:
 
-	void Cnt(int Num);
+	void Thread1(int Num);
+
+	void Cnt1(int Num);
+
 	int m_iCnt;
+
+	bool m_bFinish;
+
+private:
 
 };

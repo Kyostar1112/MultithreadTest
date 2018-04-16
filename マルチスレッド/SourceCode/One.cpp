@@ -12,16 +12,7 @@ clsOne::~clsOne()
 {
 }
 
-void clsOne::thread1(int Num)
-{
-	thread th1(&clsOne::Cnt,Num/*[] {}*/);
-	if (th1.joinable())
-	{
-		th1.join();
-	}
-}
-
-void clsOne::Cnt(int Num)
+void clsOne::Cnt1(int Num)
 {
 	if (m_iCnt>Num)
 	{
@@ -34,3 +25,13 @@ bool clsOne::GetFinsh()
 {
 	return m_bFinish;
 }
+
+void clsOne::Thread1(int Num)
+{
+	thread th1(&clsOne::Cnt1, Num);
+	if (th1.joinable())
+	{
+		th1.join();
+	}
+}
+
